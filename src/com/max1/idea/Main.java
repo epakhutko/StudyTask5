@@ -1,18 +1,18 @@
 package com.max.idea;
+import java.util.Locale;
 import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        Scanner inp = new Scanner(System.in);
+        Scanner inp = new Scanner(System.in).useLocale(Locale.ENGLISH);
 
         System.out.println("Input 3 numbers:");
-        int x = inp.nextInt();
-        int y = inp.nextInt();
-        int z = inp.nextInt();
-        double r = (x + y + x);
-        r/=3;
-
-        System.out.printf("%f\n", r);
+        double x = inp.nextDouble();
+        double y = inp.nextDouble();
+        double z = inp.nextDouble();
+        double r= (x + y + z) / 3;
+        System.out.printf("average: %f\n", r);
+        r/=2;
         int ri = (int) r;
 
         if (ri>3)
